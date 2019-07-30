@@ -5,6 +5,8 @@ const { buildSchema } = require("graphql");
 
 const PORT = 4000;
 
+const events = [];
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -17,12 +19,27 @@ app.use(
   "/graphql",
   graphqlHttp({
     schema: buildSchema(`
+      type Event {
+        _id: ID!
+        title: String!
+        description: String!
+        price: Float!
+        date: String!
+      }
+
+      input InputEvent {
+        title: String!
+        description: String!
+        price: Float!
+        date: String!
+      }
+
       type RootQuery {
-        events: [String!]!
+        events: [Event!]!
       }
 
       type RootMutation {
-        createEvent(name: String): String
+        createEvent(inputEvent: InputEvent): Event
       }
 
       schema {
@@ -32,11 +49,18 @@ app.use(
     `),
     rootValue: {
       events: () => {
-        return ["Baher", "Romina", "Mona"];
+        return events;
       },
       createEvent: args => {
-        const eventName = args.name;
-        return eventName;
+        const event = {
+          _id: Math.random().toString(),
+          title: args.inputEvent.title,
+          description: args.inputEvent.description,
+          price: +args.inputEvent.price,
+          date: args.inputEvent.date
+        }
+        events.push(event);
+        return event;
       }
     },
     graphiql: true
