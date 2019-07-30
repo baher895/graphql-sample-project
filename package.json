@@ -1,0 +1,37 @@
+{
+  "name": "graphql-sample-project",
+  "version": "1.0.0",
+  "description": "This a sample project.I used Node.js, ES7, Express, Mongodb and Graphql here. Its a simple Back end server shows how to use Node.js, Express with Mongodb (mongoose) and Graphql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baher895/graphql-sample-project.git"
+  },
+  "keywords": [
+    "graphql",
+    "node",
+    "express",
+    "es7",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "Baher Hedayati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baher895/graphql-sample-project/issues"
+  },
+  "homepage": "https://github.com/baher895/graphql-sample-project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
