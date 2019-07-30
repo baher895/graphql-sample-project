@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const graphqlHttp = require("express-graphql");
 const { buildSchema } = require("graphql");
+const mongoose = require("mongoose");
 
 const PORT = 4000;
 
@@ -58,7 +59,7 @@ app.use(
           description: args.inputEvent.description,
           price: +args.inputEvent.price,
           date: args.inputEvent.date
-        }
+        };
         events.push(event);
         return event;
       }
@@ -67,8 +68,19 @@ app.use(
   })
 );
 
-app.listen(process.env.PORT || PORT || 3000, () => {
-  console.log(
-    `The Server is Up & Running on Port ${process.env.PORT || PORT || 3000}`
-  );
-});
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USER}:${
+      process.env.MONGO_PASSWORD
+    }@cluster0-y9ecc.mongodb.net/test?retryWrites=true&w=majority`
+  )
+  .then(() => {
+    app.listen(process.env.PORT || PORT || 3000, () => {
+      console.log(
+        `The Server is Up & Running on Port ${process.env.PORT || PORT || 3000}`
+      );
+    });
+  })
+  .catch(err => {
+    console.log(err);
+  });
