@@ -5,7 +5,10 @@ In this project, we have a booking event system. You can create an event or book
 **Note :** This is a dev project, not a production version.
 
 # Developer Note:
+Quick Index:
+- [This](#sample-format) 
 
+<a name='sample-format'></a>
 ## Before Start:
 - Please create a JSON file in the root folder and name it `nodemon.json`. 
 
@@ -91,7 +94,7 @@ createdEvents
 ```
 {
   mutation {
-    createEvent(eventInput: {title: "Something", description: "Really??", price: 10.99, date: "2019-08-01T01:42:07.433Z"}) {
+    createEvent(eventInput: {title: "How 2 Use GraphQL", description: "Amazing Source to learn HOW?!", price: 10.99, date: "2019-08-01T01:42:07.433Z"}) {
       _id
       title
       price
