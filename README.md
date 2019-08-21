@@ -1,56 +1,55 @@
-# graphql-sample-project
-This a sample project. I used Node.js, ES7, Express, Mongodb and Graphql here. Its a simple Back end server shows how to use Node.js, Express with Mongodb (mongoose) and Graphql.
-In this project we have a booking event system. You can create and event or book and event such as your birthday or wedding aniversery.
+# Graphql Sample Project:
+This is a sample project. I used Node.js, ES7, Express, MongoDB, mongoose, and Graphql here. Its a simple backend server shows how to use Node.js, Express with MongoDB (mongoose) and Graphql, together.
+In this project, we have a booking event system. You can create an event or book an event such as your birthday or wedding anniversary.
 
-**Note :** This is a dev sample project, not for production.
+**Note :** This is a dev project, not a production version.
 
-## Developer Note:
-### Before Start:
-- Please create a JSON file in root folder and name it `nodemon.json`. 
+# Developer Note:
 
-**Note :** it will use to store enviroment ariable during dev mode. in production you need to set them in other way.
+## Before Start:
+- Please create a JSON file in the root folder and name it `nodemon.json`. 
 
-- copy and past: 
+**Note :** It will use to store the environment variable during dev mode. In production, you need to set them in another way.
+
+- Copy and past below JSON object to `nodemon.json` file: 
 ```
 {
   "env": {
-    "MONGO_USER": "<your mongodb username in Mongo Atlas>",
-    "MONGO_PASSWORD": "<your mongodb password in Mongo Atlas>",
+    "MONGO_USER": "<your mongodb username in mongoDB Atlas>",
+    "MONGO_PASSWORD": "<your mongodb password in mongoDB Atlas>",
     "MONGO_DB": "graphql-sample-db",
     "SECRET_KEY": "SuperSaltySecretKey"
   }
 }
 ```
 
-- update fields in .json file
+- Update fields in JSON file
 
-### How to Run:
-```
-In root folder, run:
-```
+## How to Run:
+In the root folder, run:
+
 - npm install
 - npm start
 
-### Health Check:
-- send a GET request to /health-check 
-- you should be able to get the message: "The Server is Up & Healthy" in respond.
+## Health Check:
+- Send a GET request to `/health-check` 
+- You should be able to get the message: "The Server is Up & Healthy" in respond.
 - You are fine
 
-### How to Use:
-```
-to use graphql, you just need to send POST request to /graphql end point with your favourate http tools.
-please note you can noty send anything but POST to graphql end point and put other details in body.
-open 
-```
-- Create User
-- Login with User and get token
+## How to Use:
+To use Graphql, you just need to send a POST request to `/graphql`  endpoint with your favorite HTTP tools.
+Please note you cannot send anything but POST to Graphql endpoint and put other details in the body.
+Since graphic QL is enabled, it's much easier to interact with backend using browser.
+
+- Create user
+- Login with user and get token
 - Set token in header (Bearer Token)
-- send request to the server 
+- Send a POST request to the server 
 - Cheers
 
-**Note:** You dont need to Authenticate for all routs. you can find more details in API definition. 
+**Note:** You don't need to Authenticate for all routes. You can find more details in Queries and Mutations. 
 
-### Models:
+## Models:
 - Booking:
 ```
 event
@@ -74,18 +73,13 @@ email
 password
 createdEvents
 ```
-**NOTE :** Email should has valid email format
+**NOTE :** The email should have a valid email format.
 
-### API Defenition:
-- end point: /graphql
-- verb: POST
-- body:
-```
-mutation:
-query:
-```
+## API Defenition:
+- Endpoint: `/graphql`
+- Action: POST
 
-### Queries:
+## Queries:
 - login
 ```
 Authentication: Not required
@@ -133,7 +127,7 @@ Output:
 ]
 ```
 
-### Mutations:
+## Mutations:
 - createUser
 ```
 Authentication: Not required
@@ -203,6 +197,6 @@ Output:
 }
 ```
 
-### To Do:
+## To Do:
 - Put related db hits in a Transaction
 - Make sure each user can only delete his own event

@@ -1,7 +1,7 @@
 {
   "name": "graphql-sample-project",
   "version": "1.0.0",
-  "description": "This a sample project.I used Node.js, ES7, Express, Mongodb and Graphql here. Its a simple Back end server shows how to use Node.js, Express with Mongodb (mongoose) and Graphql",
+  "description": "This is a sample project.I used Node.js, ES7, Express, Mongodb, mongoose and Graphql here. Its a simple back-end server shows how to use Node.js, Express with Mongodb (mongoose) and Graphql",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
