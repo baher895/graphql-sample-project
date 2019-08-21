@@ -43,8 +43,6 @@ Quick Index:
 
 [Go 2 Top ^](#top)
 
-__[Go 2 Top ^](#top)__
-
 <a name='how-to-run'></a>
 
 ## How to Run:
@@ -55,6 +53,8 @@ In the root folder, in command prompt, run:
 
 **Note :** You can find Port number in your console output.
 
+[Go 2 Top ^](#top)
+
 <a name='how-to-clean'></a>
 
 ## How to Clean:
@@ -64,12 +64,16 @@ In the root folder, in command prompt, run:
 
 **Note :** It works only on MacOS, the windows version would be available soon.
 
+[Go 2 Top ^](#top)
+
 <a name='health-check'></a>
 
 ## Health Check:
 - Send a GET request to `/health-check` 
 - You should be able to get the message: "The Server is Up & Healthy" in respond.
 - You are Good 2 GOoOo
+
+[Go 2 Top ^](#top)
 
 <a name='how-to-use'></a>
 
@@ -85,6 +89,8 @@ Since graphic QL is enabled, it's much easier to interact with backend using bro
 - Cheers
 
 **Note:** You don't need to Authenticate for all routes. You can find more details in [Queries](#queries) and [Mutations](#mutations). 
+
+[Go 2 Top ^](#top)
 
 <a name='models'></a>
 
@@ -114,6 +120,8 @@ createdEvents
 ```
 **Note :** The email should have a valid email format.
 
+[Go 2 Top ^](#top)
+
 <a name='api-definition'></a>
 
 ## API Definition:
@@ -140,6 +148,8 @@ createdEvents
   }
 }
 ```
+
+[Go 2 Top ^](#top)
 
 <a name='queries'></a>
 
@@ -190,6 +200,9 @@ Output:
   }
 ]
 ```
+
+[Go 2 Top ^](#top)
+
 <a name='mutations'></a>
 
 ## Mutations:
@@ -261,8 +274,13 @@ Output:
   creator: User!
 }
 ```
+
+[Go 2 Top ^](#top)
+
 <a name='to-do'></a>
 
 ## To Do:
 - Put related db hits in a Transaction
 - Make sure each user can only delete his own event
+
+[Go 2 Top ^](#top)
