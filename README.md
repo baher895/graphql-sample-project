@@ -21,7 +21,8 @@ Quick Index:
 
 <a name='before-start'></a>
 
-## Before Start:                      [TOP ^](#top)
+[Go 2 Top ^](#top)
+## Before Start:                      
 - Please create a JSON file in the root folder and name it `nodemon.json`. 
 
 **Note :** It will be used to store the environment variable during dev mode. In production, you need to set them in another way.
