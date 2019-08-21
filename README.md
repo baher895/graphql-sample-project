@@ -6,9 +6,19 @@ In this project, we have a booking event system. You can create an event or book
 
 # Developer Note:
 Quick Index:
-- [This](#sample-format) 
+- [Before Start](#before-start) 
+- [How to Run](#how-to-run) 
+- [How to Clean](#how-to-clean) 
+- [Health Check](#health-check) 
+- [How to Use](#how-to-use) 
+- [Models](#models) 
+- [API definition](#api-definition) 
+- [Queries](#queries) 
+- [Mutations](#mutations) 
+- [To Do](#to-do) 
 
-<a name='sample-format'></a>
+<a name='before-start'></a>
+
 ## Before Start:
 - Please create a JSON file in the root folder and name it `nodemon.json`. 
 
@@ -28,6 +38,8 @@ Quick Index:
 
 - Update fields in JSON file
 
+<a name='how-to-run'></a>
+
 ## How to Run:
 In the root folder, in command prompt, run:
 
@@ -36,6 +48,8 @@ In the root folder, in command prompt, run:
 
 **Note :** You can find Port number in your console output.
 
+<a name='how-to-clean'></a>
+
 ## How to Clean:
 In the root folder, in command prompt, run:
 
@@ -43,10 +57,14 @@ In the root folder, in command prompt, run:
 
 **Note :** It works only on MacOS, the windows version would be available soon.
 
+<a name='health-check'></a>
+
 ## Health Check:
 - Send a GET request to `/health-check` 
 - You should be able to get the message: "The Server is Up & Healthy" in respond.
 - You are Good 2 GOoOo
+
+<a name='how-to-use'></a>
 
 ## How to Use:
 To use Graphql, you just need to send a POST request to `/graphql`  endpoint with your favorite HTTP tools.
@@ -59,7 +77,9 @@ Since graphic QL is enabled, it's much easier to interact with backend using bro
 - Send a POST request to the server 
 - Cheers
 
-**Note:** You don't need to Authenticate for all routes. You can find more details in Queries and Mutations. 
+**Note:** You don't need to Authenticate for all routes. You can find more details in [Queries](#queries) and [Mutations](#mutations). 
+
+<a name='models'></a>
 
 ## Models:
 - Booking:
@@ -87,7 +107,9 @@ createdEvents
 ```
 **Note :** The email should have a valid email format.
 
-## API Defenition:
+<a name='api-definition'></a>
+
+## API Definition:
 - Endpoint: `/graphql`
 - Action: POST
 - Mutation Body:
@@ -111,6 +133,8 @@ createdEvents
   }
 }
 ```
+
+<a name='queries'></a>
 
 ## Queries:
 - login
@@ -159,6 +183,7 @@ Output:
   }
 ]
 ```
+<a name='mutations'></a>
 
 ## Mutations:
 - createUser
@@ -229,6 +254,7 @@ Output:
   creator: User!
 }
 ```
+<a name='to-do'></a>
 
 ## To Do:
 - Put related db hits in a Transaction
