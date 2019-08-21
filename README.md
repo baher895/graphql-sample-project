@@ -33,6 +33,13 @@ In the root folder, in command prompt, run:
 
 **Note :** You can find Port number in your console output.
 
+## How to Clean:
+In the root folder, in command prompt, run:
+
+- npm run clean
+
+**Note :** It works only on MacOS, the windows version would be available soon.
+
 ## Health Check:
 - Send a GET request to `/health-check` 
 - You should be able to get the message: "The Server is Up & Healthy" in respond.
@@ -41,7 +48,7 @@ In the root folder, in command prompt, run:
 ## How to Use:
 To use Graphql, you just need to send a POST request to `/graphql`  endpoint with your favorite HTTP tools.
 Please note you cannot send anything but POST to Graphql endpoint and put other details in the body.
-Since graphic QL is enabled, it's much easier to interact with backend using browser.
+Since graphic QL is enabled, it's much easier to interact with backend using browser. Open the browser and simply hit the `<URL:PORT>/graphql`
 
 - Create user
 - Login with user and get token
@@ -80,6 +87,27 @@ createdEvents
 ## API Defenition:
 - Endpoint: `/graphql`
 - Action: POST
+- Mutation Body:
+```
+{
+  mutation {
+    createEvent(eventInput: {title: "Something", description: "Really??", price: 10.99, date: "2019-08-01T01:42:07.433Z"}) {
+      _id
+      title
+      price
+    }
+  }
+}
+```
+- Query Body:
+```
+{
+  events {
+    _id
+    title
+  }
+}
+```
 
 ## Queries:
 - login
