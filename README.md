@@ -9,7 +9,7 @@ In this project, we have a booking event system. You can create an event or book
 ## Before Start:
 - Please create a JSON file in the root folder and name it `nodemon.json`. 
 
-**Note :** It will use to store the environment variable during dev mode. In production, you need to set them in another way.
+**Note :** It will be used to store the environment variable during dev mode. In production, you need to set them in another way.
 
 - Copy and past below JSON object to `nodemon.json` file: 
 ```
@@ -26,15 +26,17 @@ In this project, we have a booking event system. You can create an event or book
 - Update fields in JSON file
 
 ## How to Run:
-In the root folder, run:
+In the root folder, in command prompt, run:
 
 - npm install
 - npm start
 
+**Note :** You can find Port number in your console output.
+
 ## Health Check:
 - Send a GET request to `/health-check` 
 - You should be able to get the message: "The Server is Up & Healthy" in respond.
-- You are fine
+- You are Good 2 GOoOo
 
 ## How to Use:
 To use Graphql, you just need to send a POST request to `/graphql`  endpoint with your favorite HTTP tools.
@@ -73,7 +75,7 @@ email
 password
 createdEvents
 ```
-**NOTE :** The email should have a valid email format.
+**Note :** The email should have a valid email format.
 
 ## API Defenition:
 - Endpoint: `/graphql`
