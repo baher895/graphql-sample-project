@@ -40,6 +40,9 @@ Quick Index:
 ```
 
 - Update fields in JSON file
+
+[Go 2 Top ^](#top)
+
 [__Go 2 Top ^__](#top)
 
 <a name='how-to-run'></a>
