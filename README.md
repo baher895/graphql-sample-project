@@ -21,7 +21,7 @@ Quick Index:
 
 <a name='before-start'></a>
 
-[Go 2 Top ^](#top)
+
 ## Before Start:                      
 - Please create a JSON file in the root folder and name it `nodemon.json`. 
 
@@ -40,6 +40,7 @@ Quick Index:
 ```
 
 - Update fields in JSON file
+[__Go 2 Top ^__](#top)
 
 <a name='how-to-run'></a>
 
