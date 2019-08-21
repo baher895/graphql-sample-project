@@ -43,7 +43,7 @@ Quick Index:
 
 [Go 2 Top ^](#top)
 
-[__Go 2 Top ^__](#top)
+__[Go 2 Top ^]__(#top)
 
 <a name='how-to-run'></a>
 
